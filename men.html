@@ -10,6 +10,9 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .shop-now-interface {
@@ -18,24 +21,23 @@
         }
 
         .image-container {
+            width: 100%;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             gap: 10px;
             padding: 10px;
         }
 
         .image-container img {
             width: 100%;
-            max-width: 400px; /* Adjust the max-width as needed */
             height: auto;
-            display: block;
+            max-width: 100%;
         }
     </style>
 </head>
 
 <body>
-
     <div class="shop-now-interface" id="shop-now-interface">
         <!-- Men-specific content here -->
         <h1>Welcome to the Men's Section!</h1>
