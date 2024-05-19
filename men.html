@@ -15,28 +15,31 @@
 
         .image-container {
             position: fixed;
-            top: 0;
-            left: 50%; /* Position the container from the center */
-            width: 50vw; /* Half of the viewport width */
-            height: 100vh;
+            top: 50%; /* Center the container vertically */
+            left: 50%; /* Center the container horizontally */
+            width: 80vw; /* Adjust the width of the container */
+            height: auto;
+            max-height: 80vh; /* Adjust the height of the container */
             display: flex;
             justify-content: center;
             align-items: center;
             background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
             z-index: 9999;
-            transform: translateX(-50%); /* Move the container back to the left by half of its width */
+            transform: translate(-50%, -50%); /* Move the container back to the center */
+            padding: 10px; /* Optional: add padding for better aesthetics */
+            box-sizing: border-box;
         }
 
         .image-container img {
-            max-width: 100%; /* Ensure the image covers the full width of the container */
-            max-height: 100vh; /* Ensure the image covers the full height of the viewport */
+            max-width: 100%; /* Ensure the image fits within the container width */
+            max-height: 100%; /* Ensure the image fits within the container height */
             object-fit: contain; /* Maintain aspect ratio */
         }
 
         .close-btn {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 10px;
+            right: 10px;
             color: white;
             font-size: 24px;
             cursor: pointer;
