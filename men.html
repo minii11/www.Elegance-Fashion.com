@@ -26,11 +26,13 @@
         }
 
         .image-container img {
-            width: 100vw;
-            height: auto;
+            width: 100vw;  /* Set width to the full viewport width */
+            height: 100vh; /* Set height to the full viewport height */
+            object-fit: contain; /* Ensure the entire image is visible */
         }
     </style>
 </head>
+
 <body>
     <div class="shop-now-interface" id="shop-now-interface">
         <!-- Men-specific content here -->
