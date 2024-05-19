@@ -10,9 +10,6 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
 
         .shop-now-interface {
@@ -21,22 +18,26 @@
         }
 
         .image-container {
-            width: 100%;
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 10px;
             padding: 10px;
         }
 
-        .image-container img {
+        .image-wrapper {
+            width: 100%;
+            max-width: 400px; /* Adjust as needed */
+            height: auto;
+        }
+
+        .image-wrapper img {
             width: 100%;
             height: auto;
-            max-width: 100%;
+            object-fit: cover; /* Ensures the image covers the container */
         }
     </style>
 </head>
-
 <body>
     <div class="shop-now-interface" id="shop-now-interface">
         <!-- Men-specific content here -->
