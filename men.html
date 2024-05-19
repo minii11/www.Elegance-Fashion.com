@@ -10,6 +10,9 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .shop-now-interface {
@@ -18,6 +21,7 @@
         }
 
         .image-container {
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -26,13 +30,11 @@
         }
 
         .image-container img {
-            width: 100vw;  /* Set width to the full viewport width */
-            height: 100vh; /* Set height to the full viewport height */
-            object-fit: contain; /* Ensure the entire image is visible */
+            width: 100%;
+            height: auto;
         }
     </style>
 </head>
-
 <body>
     <div class="shop-now-interface" id="shop-now-interface">
         <!-- Men-specific content here -->
