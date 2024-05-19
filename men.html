@@ -24,14 +24,15 @@
             align-items: center;
             gap: 10px;
             padding: 10px;
-            width: 100%; /* Ensure container takes full width */
+            width: 100%;
         }
 
         .image-container img {
-            width: 100%;
             max-width: 100%;
+            max-height: 100vh; /* Ensure the image does not exceed the viewport height */
+            width: auto;
             height: auto;
-            object-fit: contain; /* Ensure the entire image is visible without distortion */
+            object-fit: contain; /* Ensure the entire image is visible */
         }
     </style>
 </head>
