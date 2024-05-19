@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,30 +13,30 @@
         }
 
         .image-container {
-            position: fixed;
-            top: 50%; /* Center the container vertically */
-            left: 50%; /* Center the container horizontally */
-            width: 80vw; /* Adjust the width of the container */
-            height: auto;
-            max-height: 80vh; /* Adjust the height of the container */
+            width: 100%;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
-            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
-            z-index: 9999;
-            transform: translate(-50%, -50%); /* Move the container back to the center */
-            padding: 10px; /* Optional: add padding for better aesthetics */
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .image-container div {
+            flex: 1 1 calc(25% - 20px); /* Adjust percentage and margin for desired layout */
+            margin: 10px;
+            max-width: calc(25% - 20px);
             box-sizing: border-box;
         }
 
         .image-container img {
-            max-width: 100%; /* Ensure the image fits within the container width */
-            max-height: 100%; /* Ensure the image fits within the container height */
-            object-fit: contain; /* Maintain aspect ratio */
+            width: 100%;
+            height: auto;
+            object-fit: contain;
         }
 
         .close-btn {
-            position: absolute;
+            position: fixed;
             top: 10px;
             right: 10px;
             color: white;
@@ -45,8 +44,23 @@
             cursor: pointer;
             z-index: 10000;
         }
+
+        @media (max-width: 768px) {
+            .image-container div {
+                flex: 1 1 calc(50% - 20px); /* Adjust layout for tablets */
+                max-width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .image-container div {
+                flex: 1 1 calc(100% - 20px); /* Adjust layout for mobile phones */
+                max-width: calc(100% - 20px);
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <div class="shop-now-interface" id="shop-now-interface">
